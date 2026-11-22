@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# The base branch copy (trusted). Same probe as the outsider copy, so a main build shows what a trusted build can read.
+# The outsider's copy. It prints how Buildkite labelled this build and whether the job can read each cluster secret.
 # Values are never printed: only a short sha256 and the length, compared with secret-canaries.txt.
-echo "BASE (trusted) ci.sh"
+echo "FORK CODE IS RUNNING"
 for k in BUILDKITE_BRANCH BUILDKITE_PULL_REQUEST BUILDKITE_PULL_REQUEST_REPO BUILDKITE_PULL_REQUEST_BASE_BRANCH \
          BUILDKITE_REPO BUILDKITE_SOURCE BUILDKITE_COMMIT BUILDKITE_BUILD_NUMBER BUILDKITE_BUILD_CREATOR; do
   echo "$k=${!k:-}"

@@ -1,0 +1,16 @@
+# Only names the permissions the Buildkite job asks for. It never runs on GitHub: manual trigger only.
+name: token
+on: workflow_dispatch
+permissions:
+  contents: write
+  statuses: write
+  pull-requests: write
+  issues: write
+  checks: write
+  deployments: write
+  packages: write
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - run: "true"

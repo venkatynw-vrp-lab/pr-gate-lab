@@ -1,0 +1,9 @@
+# Any check from another GitHub App on the pull request's head commit. This one is a GitHub Actions job.
+name: probe-check
+on: pull_request
+permissions: {}
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ok
